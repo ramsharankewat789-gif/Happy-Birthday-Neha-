@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Подарок для Ангелины 🎁</title>
+<title>A Surprise Birthday Gift for Neha 🎁</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -17,7 +18,7 @@ overflow-x:hidden;
 color:#333;
 }
 
-/* ---------------- ЭКРАН ПАРОЛЯ ---------------- */
+/* ---------------- PASSWORD SCREEN ---------------- */
 
 #passwordScreen{
 position:fixed;
@@ -55,7 +56,7 @@ font-size:16px;
 cursor:pointer;
 }
 
-/* ---------------- ПОДАРОК ---------------- */
+/* ---------------- GIFT ---------------- */
 
 #giftScene{
 position:fixed;
@@ -108,7 +109,7 @@ top:50%;
 transform:translateY(-50%);
 }
 
-/* ---------------- ФОН ---------------- */
+/* ---------------- BACKGROUND ---------------- */
 
 .background{
 position:fixed;
@@ -155,7 +156,7 @@ animation:explode 2.5s infinite;
 100%{opacity:0}
 }
 
-/* ---------------- ОТКРЫТКА ---------------- */
+/* ---------------- BIRTHDAY CARD ---------------- */
 
 .hero{
 min-height:100vh;
@@ -201,7 +202,7 @@ font-size:18px;
 line-height:1.7;
 }
 
-/* ---------------- БЕЛАЯ КИНОПЛЕНКА ---------------- */
+/* ---------------- WHITE FILM STRIPS ---------------- */
 
 .films{
 padding:120px 0;
@@ -262,7 +263,7 @@ height:100%;
 object-fit:cover;
 }
 
-/* анимации */
+/* ---------------- ANIMATIONS ---------------- */
 
 .leftRight{
 animation:scrollLR 6s linear infinite;
@@ -283,26 +284,42 @@ animation:scrollRL 6s linear infinite;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div id="passwordScreen">
 <div class="passwordBox">
-<h2>Открой подарок 🎁</h2>
-<input id="passwordInput" type="password" placeholder="Введите пароль">
+<h2>Open Your Gift 🎁</h2>
+
+<input
+id="passwordInput"
+type="password"
+placeholder="Enter the password"
+
+>
+
 <br>
-<button onclick="checkPassword()">Открыть</button>
+
+<button onclick="checkPassword()">Open</button>
+
 </div>
 </div>
 
 <div id="giftScene" style="display:none">
+
 <div class="giftBox" onclick="openGift()">
+
 <div class="lid" id="lid"></div>
+
 <div class="ribbonV"></div>
 <div class="ribbonH"></div>
+
 </div>
-<p>Нажми на подарок 🎁</p>
+
+<p>Click on the gift 🎁</p>
+
 </div>
 
 <audio id="music" loop>
@@ -312,23 +329,29 @@ animation:scrollRL 6s linear infinite;
 <div class="background" id="bg"></div>
 
 <section class="hero" id="mainContent">
+
 <div class="card">
 
-<h1>Ангелина</h1>
-<div class="subtitle">С Днём Рождения 🎉</div>
+<h1>Neha</h1>
+
+<div class="subtitle">
+Happy Birthday 🎉
+</div>
 
 <p class="message">
-Ангелина, поздравляю! Желаю тебе, чтобы единственное, что в твоей жизни было толстым — это пачка денег в кошельке. Но мы-то с тобой знаем правду: пока кошелек худеет, твоя любимая жировая складочка только набирает авторитет. Расти большая, хотя куда уж больше? С днём рождения, толстая! ✨
+Happy Birthday, Neha! 🎉 Wishing you lots of happiness, success, and good moments ahead. Stay happy, keep smiling, and keep being the amazing person you are. Hope you have a wonderful birthday and an even better year ahead! ❤️🎂
 </p>
 
 </div>
+
 </section>
 
 <section class="films">
 
-<!-- первая пленка -->
+<!-- First film strip -->
 
 <div class="film" style="transform:rotate(25deg)">
+
 <div class="track leftRight">
 
 <div class="frame"><img src="1.jpg"></div>
@@ -346,11 +369,13 @@ animation:scrollRL 6s linear infinite;
 <div class="frame"><img src="6.jpg"></div>
 
 </div>
+
 </div>
 
-<!-- вторая -->
+<!-- Second film strip -->
 
 <div class="film" style="transform:rotate(-25deg)">
+
 <div class="track leftRight">
 
 <div class="frame"><img src="7.jpg"></div>
@@ -368,11 +393,13 @@ animation:scrollRL 6s linear infinite;
 <div class="frame"><img src="12.jpg"></div>
 
 </div>
+
 </div>
 
-<!-- третья -->
+<!-- Third film strip -->
 
 <div class="film" style="transform:rotate(25deg)">
+
 <div class="track rightLeft">
 
 <div class="frame"><img src="1.jpg"></div>
@@ -390,6 +417,7 @@ animation:scrollRL 6s linear infinite;
 <div class="frame"><img src="6.jpg"></div>
 
 </div>
+
 </div>
 
 </section>
@@ -397,45 +425,84 @@ animation:scrollRL 6s linear infinite;
 <script>
 
 function checkPassword(){
-let password=document.getElementById('passwordInput').value;
 
-if(password==='04032010'){
+let password =
+document.getElementById('passwordInput').value;
+
+if(password === '29082026'){
+
 document.getElementById('passwordScreen').style.display='none';
+
 document.getElementById('giftScene').style.display='flex';
+
 document.getElementById('music').play();
+
 }else{
-alert('Неверный пароль');
+
+alert('Incorrect password');
+
 }
+
 }
 
 function openGift(){
-let lid=document.getElementById('lid');
+
+let lid =
+document.getElementById('lid');
+
 lid.style.transform='rotate(-120deg)';
 
 setTimeout(()=>{
+
 document.getElementById('giftScene').style.display='none';
+
 document.getElementById('mainContent').style.display='flex';
+
 },800);
+
 }
 
-let bg=document.getElementById('bg');
+let bg =
+document.getElementById('bg');
 
 for(let i=0;i<30;i++){
-let balloon=document.createElement('div');
+
+let balloon =
+document.createElement('div');
+
 balloon.className='balloon';
-balloon.style.left=Math.random()*100+'%';
-balloon.style.background=`hsl(${Math.random()*360},70%,70%)`;
-balloon.style.animationDuration=(8+Math.random()*6)+'s';
+
+balloon.style.left =
+Math.random()*100+'%';
+
+balloon.style.background =
+`hsl(${Math.random()*360},70%,70%)`;
+
+balloon.style.animationDuration =
+(8+Math.random()*6)+'s';
+
 bg.appendChild(balloon);
+
 }
 
 for(let i=0;i<25;i++){
-let firework=document.createElement('div');
+
+let firework =
+document.createElement('div');
+
 firework.className='firework';
-firework.style.left=Math.random()*100+'%';
-firework.style.top=Math.random()*100+'%';
-firework.style.background=`hsl(${Math.random()*360},80%,60%)`;
+
+firework.style.left =
+Math.random()*100+'%';
+
+firework.style.top =
+Math.random()*100+'%';
+
+firework.style.background =
+`hsl(${Math.random()*360},80%,60%)`;
+
 bg.appendChild(firework);
+
 }
 
 </script>
